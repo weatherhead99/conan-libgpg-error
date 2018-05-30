@@ -4,13 +4,12 @@ import os
 class LibgpgerrorConan(ConanFile):
     name = "libgpg-error"
     version = "1.31"
-    license = "<Put the package license here>"
-    url = "<Package recipe repository url here, for issues about the package>"
-    description = "<Description of Libgpgerror here>"
+    license = "GPL-2.0"
+    url = "https://github.com/weatherhead99/conan-libgpg-error/"
+    description = "Libgpg-error is a small library that defines common error values for all GnuPG components."
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
     default_options = "shared=False"
-    generators = "cmake"
 
     def source(self):
         tools.get("https://www.gnupg.org/ftp/gcrypt/libgpg-error/%s-%s.tar.bz2" 
